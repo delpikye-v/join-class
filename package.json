@@ -1,0 +1,34 @@
+{
+  "name": "join-class-z",
+  "version": "1.0.0",
+  "description": "Join and convert list class (ES6)",
+  "main": "index.js",
+  "module": "index.js",
+  "browser": "index.js",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "test": "npx jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delpikye-v/join-class.git"
+  },
+  "homepage": "https://github.com/delpikye-v/join-class#readme",
+  "author": "Delpi.Kye",
+  "keywords": [
+    "react",
+    "css",
+    "classes",
+    "classname",
+    "react-classes"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/delpikye-v/join-class/issues"
+  },
+  "devDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {}
+}
