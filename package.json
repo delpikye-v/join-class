@@ -1,34 +1,59 @@
 {
-  "name": "join-class-z",
+  "name": "joinclass",
   "version": "1.0.0",
-  "description": "Join and convert list class (ES6)",
-  "main": "index.js",
-  "module": "index.js",
-  "browser": "index.js",
+  "description": "Join and convert list class (Remade)",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "browser": "build/index.js",
+  "upkg": "build/index.min.js",
+  "styles": "build/styles.css",
   "files": [
     "build"
   ],
+  "types": "build/index.d.ts",
   "scripts": {
-    "test": "npx jest --coverage"
+    "clean": "rimraf ./build",
+    "build": "rollup -c",
+    "cb": "npm run clean && npm run build",
+    "generate": "node ./util/create-component",
+    "prepublishOnly": "npm run build",
+    "deploy": "npm publish --access public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/delpikye-v/join-class.git"
+    "url": "https://github.com/delpikye-v/joinclass.git"
   },
-  "homepage": "https://github.com/delpikye-v/join-class#readme",
-  "author": "Delpi.Kye",
+  "homepage": "https://github.com/delpikye-v/joinclass#readme",
   "keywords": [
     "react",
+    "vue",
+    "lib",
     "css",
-    "classes",
+    "clsx",
+    "classs",
+    "classnames",
     "classname",
-    "react-classes"
+    "classes",
+    "joinclass"
   ],
+  "author": "Delpi.Kye",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/delpikye-v/join-class/issues"
+    "url": "https://github.com/delpikye-v/joinclass/issues"
   },
-  "devDependencies": {},
   "peerDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "babel-loader": "^8.2.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.56.3",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.2"
+  }
 }
